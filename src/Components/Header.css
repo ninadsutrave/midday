@@ -1,0 +1,10 @@
+.Header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #BD4747;
+    /* background: linear-gradient(to right, #BD4747, #bd4747cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 4rem;
+    /* text-shadow: 1px 8px 5px #444444; */
+}
