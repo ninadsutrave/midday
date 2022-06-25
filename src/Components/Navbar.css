@@ -1,17 +1,35 @@
 .Navbar {
     background-color: #ffffff;
+    width: 100%;
 }
 
 .Navbar ul {
     display: flex;
     justify-content: flex-end;
-    list-style: none;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: #894343;
 }
+
 
 .Navbar ul li {
     padding: 5px 50px 5px 20px;
+}
+
+.Navlink {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--darkmaroon);
+    text-decoration: none;
+    list-style: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    .Navbar ul {
+        justify-content: space-between;
+    }
+    .Navbar ul li {
+        padding: 5px 20px 5px 20px;
+    }
+    
 }

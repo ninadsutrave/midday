@@ -1,0 +1,28 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70vh;
+    width: 100%;
+}
+
+.Form { 
+    width: 500px;
+}
+
+@media screen and (max-width: 780px) {
+
+    .Form {
+        width: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .Form {
+        width: 80%;
+    }
+    
+}

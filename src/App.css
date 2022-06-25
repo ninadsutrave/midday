@@ -1,10 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --maroon: #BD4747;
+    --darkmaroon: #894343;
+    --lightblue: #97D4CA;
+}
 
 .App {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
     min-height: 100vh;
-    background-image: url(./assets/background.png);
-    background-repeat: no-repeat;
-    background-position: cover;
-    background-color: #97D4CA; 
-    text-align: center;
+    background-color:  var(--lightblue); 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Roboto';
 }

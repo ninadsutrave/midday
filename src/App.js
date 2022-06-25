@@ -1,22 +1,34 @@
-import './App.css';
-import ContentBox from './Components/ContentBox'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 import Navbar from './Components/Navbar'
 import Header from './Components/Header'
-import Searchbar from './Components/Searchbar'
-import SearchButton from './Components/SearchButton'
 import Footer from './Components/Footer'
+
+import Home from './Components/Home'
+import About from './Components/About'
+import Contact from './Components/Contact'
+
+import './App.css';
 
 const App = () => {
 
   return (
-    <div className="App">
-      <Navbar />
-      <Header />
-      <Searchbar />
-      <SearchButton />
-      <ContentBox />
-      <Footer />
-    </div>
+    
+      <div className="App">
+        <BrowserRouter>
+          <Navbar />
+          <Header />
+        
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+          </Routes>
+
+          <Footer />
+        </BrowserRouter>
+      </div>
+    
   );
 }
 
