@@ -7,35 +7,39 @@ const AlgoliaSearch = ({setQuery, setWeatherData}) => {
 
   const handleSubmit = async (e) => {
     // console.log(e.suggestion.highlight)
-
+    setWeatherData(null)
     const lat = e.suggestion.latlng.lat
     const long = e.suggestion.latlng.lng
 
     const search = e.suggestion.highlight.name
-    const item = search.slice(4).split("<").shift()
-
+    const item = search.replaceAll("<em>","").replaceAll("</em>","")
     setQuery(item)
 
     try {
-      const response = await axios.get(`https://midday-weather-application.herokuapp.com/initial?lat=${lat}&long=${long}`)
-      setWeatherData(response.data)
+      const response = await axios.get(`http://localhost:5000/initial?lat=${lat}&long=${long}`)
+      if(response.data.error) {
+        const response = await axios.get(`http://localhost:5000/weather?address=${item}`)
+        const forecast = JSON.stringify(response.data)
+        setWeatherData(forecast)  
+      }
+      else {
+        setWeatherData(response.data)
+      }
     }
     catch (err) {
         console.error(err)
-        const response = await axios.get(`https://midday-weather-application.herokuapp.com/weather?address=${item}`)
+        const response = await axios.get(`http://localhost:5000/weather?address=${item}`)
         const forecast = JSON.stringify(response.data)
         setWeatherData(forecast)        
     }
+
   }
 
   return (
-    <>
       <Place 
         onChange={handleSubmit}
         useDeviceLocation={true}
       /> 
-      <p className="placeholder">Search a location</p>
-    </>
   )
 }
 

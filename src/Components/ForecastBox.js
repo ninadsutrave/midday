@@ -2,7 +2,17 @@ import React from 'react'
 import './ForecastBox.css'
 import icon from '../assets/svg/wi-day-showers.svg'
 
-const ForecastBox = ({ content }) => { 
+const ForecastBox = ({location, data}) => { 
+
+  if(!location || !data) {
+    return (
+      <div className="content-box message">
+        <p>Type in a city name and check the real time weather in few seconds!</p>
+      </div>
+    )
+  }
+
+  const [date, time] = data.time.split(' ')
 
   return (
     <div className="content-box"> 
@@ -12,15 +22,23 @@ const ForecastBox = ({ content }) => {
             <img className="weather-icon" alt="weather icon" src={icon}/>
           </div>
           <div className="description">
-            Light Rain Showers
+            {data.descp[0]}
           </div>
         </div>
         <div className="top-right">
-          <p className="temperature">25°C</p>
-          <p className="location">Rupnagar</p>
-          <p className="date">15/05/21</p>
-          <p className="time">2:30PM</p>
+          <p className="temperature">{data.temp}°C</p>
+          <div>
+            <p className="location">{location}</p>
+            <p className="date">{date}</p>
+            <p className="time">{time}</p>
+          </div>
         </div>
+      </div>
+
+      <div className="bottom-segment">
+        <p className="feels-like">Feels Like: {data.feelslike}°C</p>
+        <p className="precipitation">Precipitation: {data.precip}%</p>
+        <p className="wind-speed">Wind Speed: {data.windSpeed}kmph</p>
       </div>
 
 

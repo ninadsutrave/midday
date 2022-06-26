@@ -6,7 +6,15 @@ import './Home.css'
 
 const Home = () => {
 
-    const [weatherData, setWeatherData] = useState()
+    const [weatherData, setWeatherData] = useState({
+        descp: [],
+        feelslike: 0,
+        location: "",
+        precip: 0,
+        temp: 0,
+        time: "",
+        windSpeed: 0
+    })
     const [query, setQuery] = useState()
 
     useEffect(() => {
@@ -17,34 +25,21 @@ const Home = () => {
         
         const success = async (pos) => {
             const response = await axios.get(process.env.REACT_APP_BASE_URL+`initial?lat=${pos.coords.latitude}&long=${pos.coords.longitude}`)
-            setWeatherData(response.data)
+            if(response.data.error) {
+                console.warn(`ERROR: ${response.data.error}`);
+            }
+            else {
+                response.data.location = response.data.location.split(',').slice(2).join(',').trim()
+                setWeatherData(response.data)
+            }
         } 
         
         const error = (err) => {
+            setWeatherData(null)
             console.warn(`ERROR(${err.code}): ${err.message}`);
         }
         navigator.geolocation.getCurrentPosition(success, error, options)
     }, [])
-
-    const handleChange = async (event) => {
-        setQuery(event.target.value)     
-    }
-    
-    const handleSubmit = async (event) => {
-        if(event.key === "Enter") {
-            event.preventDefault()
-
-            try {
-                const response = await axios.get(process.env.REACT_APP_BASE_URL+`weather?address=${query}`)
-                const forecast = JSON.stringify(response.data)
-                setWeatherData(forecast)
-            }
-            catch (err) {
-                console.error(err)
-            }
-
-        }
-    }
 
   return (
     <div className="Home">
@@ -54,27 +49,8 @@ const Home = () => {
                 setQuery={setQuery}
                 setWeatherData={setWeatherData}
             />
-
-            {/* <input 
-                className="Searchbar" 
-                placeholder="Search for a location" 
-                id="search-location"
-                type="text"
-                onChange = {handleChange}
-                onKeyPress = {handleSubmit}
-            />
-            <button onClick = {handleSubmit} className="SearchButton">
-                <div className="Circle">
-                    <img 
-                        className="SearchIcon" 
-                        alt="" 
-                        src={require("../assets/search-icon.png")} 
-                    />
-                </div>        
-            </button> */}
         </div>
-
-        <ForecastBox content = {query} />
+        <ForecastBox location={query?query:weatherData?weatherData.location:null} data={weatherData} />
     </div>
   )
 }

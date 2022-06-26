@@ -5,9 +5,45 @@
     flex-direction: column;
 }
 
-h3 {
+.info-box {
+    width: 500px;
+    height: 45vh;
+    background: linear-gradient(111.61deg, rgba(151, 212, 201, 0.7) 1.11%, rgba(196, 196, 196, 0.3) 97.6%, rgba(196, 196, 196, 0.3) 97.61%, rgba(196, 196, 196, 0.3) 97.91%);
+    border: 1px solid rgba(163, 147, 147, 0.7);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 2rem;
+    line-height: 28px;
+    font-weight: 500;
     color: var(--maroon);
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
+h3 {
+    color: var(--maroon);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.para-1 {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 780px) {
+
+    .info-box {
+        width: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .info-box {
+        width: 80%;
+        padding: 1.5rem;
+        height: 50vh;
+    }
+    
+}
