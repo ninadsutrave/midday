@@ -15,6 +15,7 @@ const App = () => {
   return (
     
       <div className="App">
+
         <BrowserRouter>
           <Navbar />
           <Header />

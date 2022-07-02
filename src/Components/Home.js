@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ForecastBox from './ForecastBox'
 import axios from 'axios'
 import AlgoliaSearch from './AlgoliaSearch'
+import setIcon from '../utils/icons'
 import './Home.css'
 
 const Home = () => {
@@ -13,7 +14,9 @@ const Home = () => {
         precip: 0,
         temp: 0,
         time: "",
-        windSpeed: 0
+        windSpeed: 0,
+        isDay: true,
+        icon: null
     })
     const [query, setQuery] = useState()
 
@@ -30,7 +33,24 @@ const Home = () => {
             }
             else {
                 response.data.location = response.data.location.split(',').slice(2).join(',').trim()
-                setWeatherData(response.data)
+
+                let icon = response.data.descp[0].toLowerCase()
+                if(icon === "clear") {
+                    icon = icon + " " + response.data.isDay
+                }
+                icon = (setIcon[icon])?setIcon[icon]:setIcon["clear true"]
+                
+                setWeatherData({
+                    descp: response.data.descp[0],
+                    feelslike: response.data.feelslike,
+                    location: response.data.location,
+                    precip: response.data.precip,
+                    temp: response.data.temp,
+                    time: response.data.time,
+                    windSpeed: response.data.windSpeed,
+                    isDay: response.data.isDay,
+                    icon
+                })
             }
         } 
         

@@ -1,6 +1,14 @@
+.Contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 .contact-box {
     width: 500px;
-    height: 55vh;
+    max-height: 55vh;
     background: linear-gradient(111.61deg, rgba(151, 212, 201, 0.7) 1.11%, rgba(196, 196, 196, 0.3) 97.6%, rgba(196, 196, 196, 0.3) 97.61%, rgba(196, 196, 196, 0.3) 97.91%);
     border: 1px solid rgba(255, 255, 255, 0.7);
     box-sizing: border-box;
@@ -59,7 +67,7 @@ textarea {
 
     .contact-box {
         width: 80%;
-        padding: 0.5rem;
+        padding: 1rem;
     }
     
 }

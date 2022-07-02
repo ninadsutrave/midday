@@ -7,7 +7,7 @@
 
 .info-box {
     width: 500px;
-    height: 45vh;
+    max-height: 45vh;
     background: linear-gradient(111.61deg, rgba(151, 212, 201, 0.7) 1.11%, rgba(196, 196, 196, 0.3) 97.6%, rgba(196, 196, 196, 0.3) 97.61%, rgba(196, 196, 196, 0.3) 97.91%);
     border: 1px solid rgba(163, 147, 147, 0.7);
     box-sizing: border-box;

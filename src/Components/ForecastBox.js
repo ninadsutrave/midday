@@ -1,6 +1,5 @@
 import React from 'react'
 import './ForecastBox.css'
-import icon from '../assets/svg/wi-day-showers.svg'
 
 const ForecastBox = ({location, data}) => { 
 
@@ -19,10 +18,10 @@ const ForecastBox = ({location, data}) => {
       <div className="top-segment">
         <div className="top-left">
           <div className="weather-icon-wrapper">
-            <img className="weather-icon" alt="weather icon" src={icon}/>
+            <img className="weather-icon" alt="weather icon" src={data.icon}/>
           </div>
           <div className="description">
-            {data.descp[0]}
+            {data.descp}
           </div>
         </div>
         <div className="top-right">
