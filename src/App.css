@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
+    --lightmaroon: #d47a7a;
     --maroon: #BD4747;
     --darkmaroon: #894343;
     --lightblue: #97D4CA;
