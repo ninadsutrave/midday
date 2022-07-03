@@ -12,7 +12,7 @@ const ForecastBox = ({location, data}) => {
   }
 
   const [date, time] = data.time.split(' ')
-
+  console.log(data.icon)
   return (
     <div className="content-box"> 
       <div className="top-segment">
@@ -39,9 +39,6 @@ const ForecastBox = ({location, data}) => {
         <p className="precipitation">Precipitation: {data.precip}%</p>
         <p className="wind-speed">Wind Speed: {data.windSpeed}kmph</p>
       </div>
-
-
-
     </div>
   )
 }

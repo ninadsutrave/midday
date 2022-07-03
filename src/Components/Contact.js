@@ -1,7 +1,23 @@
 import React from 'react'
 import './Contact.css'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
+
+  const submitEmail = (e) => {
+
+    e.preventDefault()
+
+    // emailjs.sendForm('gmail', 'template_ijlhyl4', e.target, 'i5YXv0eeibdkR8jS1')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+
+    console.log(e.target)
+  }
+
   return (
     <div className="Contact">
       <h3>DROP ME A HELLO?</h3>
@@ -12,6 +28,8 @@ const Contact = () => {
               <input 
                 type="text" 
                 name="name" 
+                autoComplete="false"
+                required
               />
             </p>
             <p className="user-email">
@@ -19,6 +37,7 @@ const Contact = () => {
               <input 
                 type="email" 
                 name="email" 
+                required
               />
             </p>
             <p className="user-message">
@@ -29,13 +48,12 @@ const Contact = () => {
               ></textarea>
             </p>
             <p class="full">
-              <button 
+              <input 
                 className="submit-button" 
                 type="submit"
-                onClick={(e)=>{e.preventDefault()}}
-              >
-                SEND
-              </button>
+                onClick={submitEmail}
+                value="SEND"
+              />
             </p>
           </form>
       </div>

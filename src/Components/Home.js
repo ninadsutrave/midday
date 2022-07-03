@@ -16,8 +16,9 @@ const Home = () => {
         time: "",
         windSpeed: 0,
         isDay: true,
-        icon: null
+        icon: ""
     })
+
     const [query, setQuery] = useState()
 
     useEffect(() => {
@@ -27,7 +28,7 @@ const Home = () => {
         };
         
         const success = async (pos) => {
-            const response = await axios.get(process.env.REACT_APP_BASE_URL+`initial?lat=${pos.coords.latitude}&long=${pos.coords.longitude}`)
+            const response = await axios.get(process.env.REACT_APP_BASE_URL+`coordinates?lat=${pos.coords.latitude}&long=${pos.coords.longitude}`)
             if(response.data.error) {
                 console.warn(`ERROR: ${response.data.error}`);
             }
@@ -38,8 +39,8 @@ const Home = () => {
                 if(icon === "clear") {
                     icon = icon + " " + response.data.isDay
                 }
-                icon = (setIcon[icon])?setIcon[icon]:setIcon["clear true"]
-                
+                icon = (setIcon.get(icon))?setIcon.get(icon):setIcon.get("clear true")
+                console.log(response.data.descp[0].toLowerCase())
                 setWeatherData({
                     descp: response.data.descp[0],
                     feelslike: response.data.feelslike,
