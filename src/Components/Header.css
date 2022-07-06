@@ -1,4 +1,6 @@
 .Header {
+    position: absolute;
+    top: 60px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 800;

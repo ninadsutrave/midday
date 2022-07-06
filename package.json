@@ -4,7 +4,8 @@
   "description": "A weather app to instantly check the weather conditions of any place on earth",
   "keywords": [
     "weather",
-    "realtime weather"
+    "realtime weather",
+    "weather forecast"
   ],
   "author": "Ninad Sutrave",
   "license": "MIT",
