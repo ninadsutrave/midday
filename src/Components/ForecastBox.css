@@ -10,15 +10,15 @@
 
 .message p {
     text-align: center;
-    text-transform: uppercase;
     width: 50%;
     font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .content-box {
     width: 500px;
-    height: 55vh;
-    background: linear-gradient(111.61deg, rgba(151, 212, 201, 0.7) 1.11%, rgba(196, 196, 196, 0.3) 97.6%, rgba(196, 196, 196, 0.3) 97.61%, rgba(196, 196, 196, 0.3) 97.91%);
+    min-height: 55vh;
+    background: linear-gradient(111.61deg, rgba(201, 219, 233, 0.7) 1.11%, rgba(196, 196, 196, 0.3) 97.6%, rgba(196, 196, 196, 0.3) 97.61%, rgba(196, 196, 196, 0.3) 97.91%);
     border: 1px solid rgba(255, 255, 255, 0.7);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -48,6 +48,11 @@
     flex-direction: column;
     justify-content: space-around;
     width: 40%;
+}
+
+.weather-icon-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .weather-icon {

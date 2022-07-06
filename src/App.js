@@ -13,9 +13,20 @@ import './App.css';
 const App = () => {
 
   return (
-    
-      <div className="App">
 
+    <>
+      {/* <div className="wrapper">
+
+        <img className="image-wrapper" alt="background" src={require('./assets/bg.png')} />
+     */}
+     <div id="clouds">
+        <div class="cloud x1"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3"></div>
+        <div class="cloud x4"></div>
+        <div class="cloud x5"></div>
+      </div>
+      <div className="App">
         <BrowserRouter>
           <Navbar />
           <Header />
@@ -29,6 +40,7 @@ const App = () => {
           <Footer />
         </BrowserRouter>
       </div>
+    </>
     
   );
 }

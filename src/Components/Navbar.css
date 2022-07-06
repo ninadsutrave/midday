@@ -10,14 +10,14 @@
 
 
 .Navbar ul li {
-    padding: 5px 50px 5px 20px;
+    padding: 3px 50px 3px 20px;
 }
 
 .Navlink {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--darkmaroon);
     text-decoration: none;
     list-style: none;
