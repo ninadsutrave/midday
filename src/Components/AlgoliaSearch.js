@@ -38,6 +38,7 @@ const AlgoliaSearch = ({setQuery, setWeatherData}) => {
               precip: forecast.precip,
               temp: forecast.temp,
               time: forecast.time,
+              humidity: forecast.humidity,
               windSpeed: forecast.windSpeed,
               isDay: forecast.isDay,
               icon
@@ -59,6 +60,7 @@ const AlgoliaSearch = ({setQuery, setWeatherData}) => {
               precip: response.data.precip,
               temp: response.data.temp,
               time: response.data.time,
+              humidity: response.data.humidity,
               windSpeed: response.data.windSpeed,
               isDay: response.data.isDay,
               icon

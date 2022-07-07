@@ -14,6 +14,7 @@ const Home = () => {
         precip: 0,
         temp: 0,
         time: "",
+        humidity: 0,
         windSpeed: 0,
         isDay: true,
         icon: ""
@@ -48,6 +49,7 @@ const Home = () => {
                     precip: response.data.precip,
                     temp: response.data.temp,
                     time: response.data.time,
+                    humidity: response.date.humidity,
                     windSpeed: response.data.windSpeed,
                     isDay: response.data.isDay,
                     icon

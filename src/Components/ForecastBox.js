@@ -36,6 +36,7 @@ const ForecastBox = ({location, data}) => {
 
       <div className="bottom-segment">
         <p className="feels-like">Feels Like: {data.feelslike}°C</p>
+        <p className="humidity">Humidity: {data.humidity}%</p>
         <p className="precipitation">Precipitation: {data.precip}%</p>
         <p className="wind-speed">Wind Speed: {data.windSpeed}kmph</p>
       </div>
