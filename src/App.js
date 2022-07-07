@@ -14,7 +14,7 @@ const App = () => {
 
   return (
 
-    <>
+    <div className="Midday">
       {/* <div className="wrapper">
 
         <img className="image-wrapper" alt="background" src={require('./assets/bg.png')} />
@@ -40,7 +40,7 @@ const App = () => {
           <Footer />
         </BrowserRouter>
       </div>
-    </>
+    </div>
     
   );
 }

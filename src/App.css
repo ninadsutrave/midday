@@ -13,6 +13,10 @@ body {
     overflow: hidden;
 }
 
+.Midday {
+	max-height: 100vh;
+}
+
 .wrapper {
     overflow: hidden;
     position: relative;
@@ -102,7 +106,7 @@ body {
 }
 
 .x2 {
-	left: 200px;
+	left: 15vw;
 	-webkit-transform: scale(0.6);
 	-moz-transform: scale(0.6);
 	transform: scale(0.6);
@@ -113,7 +117,7 @@ body {
 }
 
 .x3 {
-	left: -250px; top: -200px;
+	left: 20vw; top: -200px;
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	transform: scale(0.8);
@@ -124,7 +128,7 @@ body {
 }
 
 .x4 {
-	left: 470px; top: -250px;
+	left: 10vw; top: -250px;
 	-webkit-transform: scale(0.75);
 	-moz-transform: scale(0.75);
 	transform: scale(0.75);
@@ -135,7 +139,7 @@ body {
 }
 
 .x5 {
-	left: -150px; top: -150px;
+	left: 5px; top: -150px;
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	transform: scale(0.8);
@@ -147,25 +151,25 @@ body {
 
 @keyframes moveclouds {
 	0% {
-        margin-left: 1000px;
+        margin-left: 100vw;
     }
 	100% {
-        margin-left: -1000px;
+        margin-left: -100vw;
     }
 }
 @-moz-keyframes moveclouds {
 	0% {
-        margin-left: 1000px;
+        margin-left: 100vw;
     }
 	100% {
-        margin-left: -1000px;
+        margin-left: -100vw;
     }
 }
 @-o-keyframes moveclouds {
 	0% {
-        margin-left: 1000px;
+        margin-left: 100vw;
     }
 	100% {
-        margin-left: -1000px;
+        margin-left: -100vw;
     }
 }
