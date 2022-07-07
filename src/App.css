@@ -15,6 +15,7 @@ body {
 
 .Midday {
 	max-height: 100vh;
+	overflow: hidden;
 }
 
 .wrapper {
@@ -64,7 +65,6 @@ body {
 	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
 }
 
-/*Time to finalise the cloud shape*/
 .cloud {
 	width: 200px; height: 60px;
 	background: #fff;
@@ -151,25 +151,25 @@ body {
 
 @keyframes moveclouds {
 	0% {
-        margin-left: 100vw;
+        margin-left: 50vw;
     }
 	100% {
-        margin-left: -100vw;
+        margin-left: -50vw;
     }
 }
 @-moz-keyframes moveclouds {
 	0% {
-        margin-left: 100vw;
+        margin-left: 50vw;
     }
 	100% {
-        margin-left: -100vw;
+        margin-left: -50vw;
     }
 }
 @-o-keyframes moveclouds {
 	0% {
-        margin-left: 100vw;
+        margin-left: 50vw;
     }
 	100% {
-        margin-left: -100vw;
+        margin-left: -50vw;
     }
 }
