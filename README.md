@@ -6,16 +6,22 @@ As the name suggests, it is any easy to use weather web application, that can be
 
 Get the following information of the place you search:
 ✓ Time
+
 ✓ Date
+
 ✓ Temperature
+
 ✓ Feels Like Temperature
+
 ✓ Wind Speed
+
 ✓ Humidity
+
 ✓ Precipitation
 
 ## Preview
 
-![Demonstration](assets/demo.gif)
+![Demonstration](./src/assets/demo.gif)
 
 ## Try it out?
 
