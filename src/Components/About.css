@@ -17,12 +17,12 @@
     padding: 2rem;
     line-height: 28px;
     font-weight: 500;
-    color: var(--maroon);
+    color: var(--brown);
     margin-bottom: 2rem;
 }
 
 h3 {
-    color: var(--maroon);
+    color: var(--brown);
     margin-bottom: 2rem;
     text-align: center;
 }

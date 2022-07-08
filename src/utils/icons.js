@@ -29,6 +29,7 @@ const icons = new Map([
     ["moderate rain at times", rain],
     ["light rain, rain shower", rain],
     ["shower in vicinity", rain],
+    ["shower in vicinity, rain shower", rain],
     ["light rain, rain", rain],
     ["light rain shower", rain],
     ["patchy rain possible", rain],

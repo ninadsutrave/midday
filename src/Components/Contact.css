@@ -18,7 +18,7 @@
     padding: 1rem 2rem 1rem 2rem;
     line-height: 28px;
     font-weight: 500;
-    color: var(--maroon);
+    color: var(--brown);
 }
 
 .form-header {
@@ -33,7 +33,7 @@ form p {
 
 form p input {
     outline: none;
-    border: 1px solid var(--maroon);
+    border: 1px solid var(--brown);
     padding: 5px 10px 5px 10px;
 }
 
@@ -49,14 +49,14 @@ input:focus::placeholder {
 
 textarea {
     resize: none;
-    border: 1px solid var(--maroon);
+    border: 1px solid var(--brown);
     padding: 5px 10px 5px 10px;
     font-family: 'Roboto';
 }
 
 textarea:focus {
     outline: none;
-    border: 1px solid var(--maroon);
+    border: 1px solid var(--brown);
 }
 
 textarea::placeholder {
@@ -74,7 +74,7 @@ textarea:focus::placeholder {
     padding: 10px;
     outline: none;
     border: none;
-    background: var(--maroon);
+    background: var(--brown);
     color: #FFFFFF;
     border-radius: 5px;
     align-self: center;

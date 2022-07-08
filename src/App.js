@@ -15,16 +15,12 @@ const App = () => {
   return (
 
     <div className="Midday">
-      {/* <div className="wrapper">
-
-        <img className="image-wrapper" alt="background" src={require('./assets/bg.png')} />
-     */}
      <div id="clouds">
-        <div class="cloud x1"></div>
-        <div class="cloud x2"></div>
-        <div class="cloud x3"></div>
-        <div class="cloud x4"></div>
-        <div class="cloud x5"></div>
+        <div class="cloud one"></div>
+        <div class="cloud two"></div>
+        <div class="cloud three"></div>
+        <div class="cloud four"></div>
+        <div class="cloud five"></div>
       </div>
       <div className="App">
         <BrowserRouter>
