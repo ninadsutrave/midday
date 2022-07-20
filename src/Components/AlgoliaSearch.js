@@ -69,7 +69,7 @@ const AlgoliaSearch = ({setQuery, setWeatherData}) => {
     }
     catch (err) {
         console.error(err)
-        const response = await axios.get(`http://localhost:5000/weather?address=${item}`)
+        const response = await axios.get(process.env.REACT_APP_BASE_URL+`location?address=${item}`)
         const forecast = JSON.stringify(response.data)
         setWeatherData(forecast)        
     }
