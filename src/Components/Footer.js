@@ -4,7 +4,7 @@ import './Footer.css'
 const Navbar = () => {
   return (
     <div className="Footer">
-        Designed By: <a href="https://dribbble.com/Sanyukta_Andi" target="_blank" rel="noreferrer">Sanyukta Marandi</a>
+        MIT © <a href="https://github.com/NinadSutrave" target="_blank" rel="noreferrer">Ninad Sutrave</a>
     </div>
   )
 }
