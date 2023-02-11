@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ForecastBox from './ForecastBox'
 import axios from 'axios'
-import AlgoliaSearch from './AlgoliaSearch'
+import AlgoliaSearch from './Searchbar'
 import setIcon from '../utils/icons'
 import './Home.css'
 
@@ -23,6 +23,7 @@ const Home = () => {
     const [query, setQuery] = useState()
 
     useEffect(() => {
+        
         var options = {
             enableHighAccuracy: true,
             timeout: 5000,

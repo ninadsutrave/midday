@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="Navbar">
         <ul>
-            <NavLink className="Navlink" to="/">
+            <NavLink onClick={() => {setTimeout(() => {window.location.reload()}, 0)}} className="Navlink" to="/">
               <li>Home</li>
             </NavLink>
 
