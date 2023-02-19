@@ -7,7 +7,15 @@
     "realtime weather",
     "weather forecast"
   ],
-  "author": "Ninad Sutrave",
+  "author": {
+    "name": "Ninad Sutrave",
+    "email": "ninadsutrave@gmail.com",
+    "url": "https://ninadsutrave.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninadsutrave/midday"
+  },
   "license": "MIT",
   "private": true,
   "proxy": "https://midday.vercel.app/",
